@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>METAFIN</title>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center" style="background-color: #364d59;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="img/logo.png" alt=""> -->
+        <h1>metaFIN<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="javascript:window.location.reload();" class="active">Services</a></li>
+          <li><a href="/currency_api">Cryptocurrency Live Price API</a></li>
+          <li><a href="/project_references">References</a></li>
+          <li><a href="/contact">Contact Info</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+
+    </div>
+    <style>
+   
+    </style>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+   <!-- ======= Recent Blog Posts Section ======= -->
+   <section id="recent-blog-posts" class="recent-blog-posts" style="padding-top:150px;">
+    <div class="container" data-aos="fade-up">
+
+  
+  
+    <div class=" section-header">
+      <h2>Services</h2>
+      <div class="message">
+      </div>
+     
+    </div>
+
+    <div class="float-container">
+
+        <div class="float-child-1">
+             <div class="row gy-5">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="100"> 
+                 <div class="post-item position-relative" style="overflow:hidden;">
+         
+                   <div class="post-content d-flex flex-column" style="padding:15px!important;">
+                    <div class="row">
+                        <div class="col-3">
+                         <i class="fa fa-user-circle fa-2x"></i>
+                        </div>
+                        <div class="col-9">
+                         <h3 class="pt-2" style="font-size:18px">  Welcome User  </h3> 
+                        </div>
+                        <div class="col-12">
+                         <h3 class="pt-2" style="font-size:24px;text-align:center;"> 
+                            <script>
+                                var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+                                document.write(utc);
+                            </script>
+                        
+                         </h3> 
+                        </div>
+                        <div class="col-12" style="margin-top:80px;">
+                         <h6 class="pt-2"> 
+
+                            Welcome to Metafin Services, One Stop for
+                        
+                         </h6> 
+                         <ul>
+                            <li>Interacting with your Smart Contract Wallet</li>
+                            <li>Deposit, Withdraw ETH from and Into your Smart Contract anytime</li>
+                         </ul>
+                        </div>
+                    </div>
+
+            
+                    <div class="meta d-flex align-items-center mt-2">
+                      <div class="d-flex align-items-center">
+                        <h5 class="post-title" id="contractAccount" style="display:none;font-size:12px!important;"><br><span id="contractAccountDet"></span></h5>
+                      </div>
+                    </div>
+                    
+                    
+         
+                    
+         
+                   </div>
+         
+                 </div>
+                </div>
+              
+             </div>
+        </div>
+        
+        <div class="float-child-2">
+          <div class="blue">
+            <div class="row gy-5">
+                <div class="col-xl-6 col-md-6" data-aos="fade-up" data-aos-delay="100"> 
+                  <div class="post-item position-relative" style="overflow:hidden;">
+          
+                    <div class="post-content d-flex flex-column" style="text-align:center;">
+                        <h1><i class="fa-brands fa-ethereum"></i> <span id="displayAccountBalance">0 </span> ETH </h1> 
+                        <h5 style="margin-left:15px;"><i class="fa fa-refresh" style="cursor: pointer;" id="refreshBalance"></i> <span class="ml-3">Account Balance</span> </h5>
+                        
+                        <div class="ml-3 mt-5">
+                            <h6  style="font-size:14px;">Acc No: <span id="accNumber"></span></h6>
+                        </div>
+                    </div>
+
+                  
+          
+                  </div>
+                  
+                </div>
+
+                <div class="col-xl-6 col-md-6" data-aos="fade-up" data-aos-delay="100"> 
+                    <div class="post-item position-relative" style="overflow:hidden;">
+            
+                      <div class="post-content d-flex flex-column" style="text-align:center;">
+                          <h1><i class="fa-brands fa-ethereum"></i> <span id="displayContractBalance">0 </span> WEI </h1> 
+                          <h5 style="margin-left:15px;"><i class="fa fa-refresh" style="cursor: pointer;" id="refreshWallet"></i> <span class="ml-3">Wallet Balance</span> </h5>
+                          
+                          <div class="ml-2 mt-5">
+                              <h6  style="font-size:14px;">Wallet: 0xB1DD0cd19ae1322A8291b53fb646119287678efe </h6>
+                          </div>
+                      </div>
+  
+                    
+            
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6" data-aos="fade-up" data-aos-delay="100"> 
+                    <div class="post-item position-relative"style="overflow:hidden;" >
+            
+                      <div class="post-content d-flex flex-column" style="text-align:center;">
+                        <form  class="php-email-form formSubmit">
+                            <h6>Add Ether To Your Smart Contract Wallet</h6>
+                            <div class="row gy-3">
+                              <div class="col-md-12">
+                                <input type="number" class="form-control" id="amountInput" placeholder="Enter Amount" required>
+                              </div>
+              
+                              <div class="col-md-12 mt-2">
+                                <button class="btn btn-primary" type="submit" id="depositAmount">Add Now</button>
+                              </div>
+              
+                            </div>
+                          </form>
+                      </div>
+  
+                    
+            
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6" data-aos="fade-up" data-aos-delay="100"> 
+                    <div class="post-item position-relative"style="overflow:hidden;" >
+            
+                      <div class="post-content d-flex flex-column" style="text-align:center;">
+                        <form>
+                            <h6>Withdraw Ether Smart Contract Wallet To Account</h6>
+                            <div class="row gy-3">
+              
+                              <div class="col-md-6">
+                                <input type="text" id="addressInput" class="form-control" placeholder="Enter Address" required>
+                              </div>
+              
+                              <div class="col-md-6">
+                                <input type="number" class="form-control" id="withdrawamount" placeholder="Enter Amount" required>
+                              </div>
+              
+                              <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary" id="transferToAccount">Transfer</button>
+                              </div>
+              
+                            </div>
+                        </form>
+                      </div>
+  
+                    
+            
+                    </div>
+                </div>
+
+                
+
+                
+            </div> 
+          </div>
+        </div>
+        
+    </div>
+
+     <!-- ======= Get Started Section ======= -->
+    
+   
+
+    </div>
+  </section>
+  <!-- End Recent Blog Posts Section -->
+   
+  </main><!-- End #main -->
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/js/main.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/transaction.js"></script>
+
+  
+</body>
+
+</html>
